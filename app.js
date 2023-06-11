@@ -11,7 +11,6 @@ function onLoginSubmit(event) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  console.log("username >", username);
   paintGreetings(username);
 }
 
@@ -21,7 +20,6 @@ function paintGreetings(username) {
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);
-console.log("saveUsername > ", saveUsername);
 
 if (saveUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
